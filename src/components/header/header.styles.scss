@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1.5vw 5vw;
+  background-color:#fff;
+  border-bottom:1px solid#f0f0f0;
+  .pos-logo {
+    img {
+      width: 12vw;
+      cursor:pointer;
+    }
+  }
+  .sign-buttons{
+    display: flex;
+    .sign-in {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      font-size:0.97vw;
+      padding:0.9vw 1.5vw;
+      background-color:#f1eeff;
+      color:#6c5dd2;
+      border:none;
+      border-radius:0.6vw;
+      margin-right:1.2vw;
+      cursor:pointer;
+      transition:0.3s;
+      &:hover {
+        box-shadow: 0 1px 3px #f1eefe;
+      }
+    }
+    .sign-up {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      font-size:0.97vw;
+      padding:0.9vw 1.5vw;
+      background-color:#6c5dd4;
+      color:#ffffff;
+      border:none;
+      border-radius:0.6vw;
+      margin-right:1.2vw;
+      cursor:pointer;
+      transition:0.3s;
+      &:hover {
+        box-shadow: 0 1px 3px #6c5dd4;
+      }
+    }
+  }
+}
