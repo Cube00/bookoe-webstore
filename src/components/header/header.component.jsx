@@ -4,6 +4,8 @@ import Logo from '../../assets/logo.png'
 
 import './header.styles.scss'
 
+import {AiOutlineUser} from 'react-icons/ai'
+
 const Header = () =>{
   return <>
     <div className="header">
@@ -12,7 +14,7 @@ const Header = () =>{
       </div>
       <div className="sign-buttons">
         <button className="sign-in">Log In</button>
-        <button className="sign-up">Sign Up</button>
+        <button className="sign-up"><span><AiOutlineUser/></span>Sign Up</button>
       </div>
     </div>
   </>

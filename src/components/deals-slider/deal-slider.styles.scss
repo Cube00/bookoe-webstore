@@ -1,0 +1,20 @@
+.deals-slider {
+  width: 75%;
+  border-radius: 1.3vw;
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  text-align:left;
+  margin:3.5vw 5.5vw ;
+}
+
+.swiper-pagination-bullet{
+  background:#6c5dd2;
+  width: 0.9vw;
+  height: 0.9vw;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin-right:0.8vw!important;
+}

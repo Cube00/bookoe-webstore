@@ -11,10 +11,6 @@ import HomePage from './pages/home/home.page'
 
 
 class App extends React.Component {
-  constructor(){
-    super();
-  }
-
   componentDidMount(){
     const {getBooks} = this.props;
     fetch(`https://api.itbook.store/1.0/new`)

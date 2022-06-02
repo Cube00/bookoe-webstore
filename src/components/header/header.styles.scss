@@ -30,6 +30,7 @@
       }
     }
     .sign-up {
+      position: relative;
       font-family: 'Open Sans', sans-serif;
       font-weight: bold;
       font-size:0.97vw;
@@ -41,8 +42,22 @@
       margin-right:1.2vw;
       cursor:pointer;
       transition:0.3s;
+      span {
+        position: absolute;
+        width: 0;
+        font-size:1.2vw;
+        left:1vw;
+        opacity: 0;
+        transition:0.3s opacity;
+      }
       &:hover {
         box-shadow: 0 1px 3px #6c5dd4;
+        padding-left:3vw;
+        span {
+          left:1vw;
+          width: auto;
+          opacity: 1;
+        }
       }
     }
   }
