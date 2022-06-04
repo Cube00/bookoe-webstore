@@ -1,21 +1,10 @@
-.offers-item {
-  width: 17vw;
+.book {
   overflow: hidden;
-  margin-right:2vw;
-  border-radius:1.5vw;
-  padding:1.8vw;
-  transition: 0.3s;
-  &:nth-child(5){
-    margin-right: 0;
-  }
-  .offers-image {
+  .book-image{
     position: relative;
-    width: 100%;
-    height: 17vw;
-    background: #fbfbfb;
-    overflow:hidden;
+    height: 20vw;
     border-radius:1vw;
-    transition: 0.3s;
+    overflow: hidden;
     .addToCart {
       position: absolute;
       width: 100%;
@@ -26,6 +15,7 @@
       z-index:1;
       opacity:0;
       transition: 0.3s;
+      top:0;
       button{
         padding:1vw 2vw;
         background:#6c5dd4;
@@ -44,13 +34,9 @@
     img {
       width: 100%;
       height: 100%;
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%, -50%);
     }
   }
-  .offers-info {
+  .book-info {
     width: 80%;
     margin: auto;
     h2 {
@@ -79,7 +65,7 @@
       font-weight:lighter;
     }
   }
-  .offers-price{
+  .book-price{
     display: flex;
     justify-content: center;
     span {
@@ -92,6 +78,5 @@
     .addToCart{
       opacity: 1;
     }
-    box-shadow: 0 11px 30px #ddd9f4;
   }
 }

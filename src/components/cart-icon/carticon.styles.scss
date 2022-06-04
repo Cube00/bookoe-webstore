@@ -1,0 +1,37 @@
+.cart-icon {
+  border:1px solid#f0f0f0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:1.2vw 1.3vw;
+  margin-right:2vw;
+  border-radius:1vw;
+  cursor: pointer;
+  transition:0.3s;
+  .quantity{
+    position: absolute;
+    top:0;
+    background-color:#ff764c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vw;
+    height: 2vw;
+    border-radius:50%;
+    font-size:1vw;
+    color:#fff;
+    font-family: "Titillium-Bold";
+    right:0;
+    margin-right:-.4vw;
+    margin-top:-.4vw;
+  }
+  .cart {
+    font-size:1.7vw;
+    color:#10142d;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 7px #f1f1f1;
+  }
+}

@@ -10,7 +10,9 @@ import OffersItem from '../offers-item/offers-item.component'
 
 import CountdownTimer from '../countdown/countdown.component'
 
-const SpecialOffers = ({specialBooks}) => {
+import {addToCart} from '../../redux/cart/cart.actions'
+
+const SpecialOffers = ({specialBooks, addToCart}) => {
   const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
   const NOW_IN_MS = new Date().getTime();
 
@@ -27,7 +29,7 @@ const SpecialOffers = ({specialBooks}) => {
     <div className="offers-content">
       {
         specialBooks.map((item)=>(
-            <OffersItem key={item.id} item={item}/>
+            <OffersItem key={item.primary_isbn13} addToCart={addToCart} item={item}/>
           )
         )
       }
@@ -39,4 +41,8 @@ const mapStateToProps = createStructuredSelector({
   specialBooks: selectSpecialBooks
 })
 
-export default connect(mapStateToProps)(SpecialOffers)
+const mapDispatchToProps = dispatch => ({
+  addToCart: (item) => dispatch(addToCart(item))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(SpecialOffers)

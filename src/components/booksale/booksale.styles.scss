@@ -1,0 +1,21 @@
+.book-on-sale {
+  margin-top:7vw;
+  .title {
+    margin-top: 0.5vw;
+    font-size: 2.2vw;
+    font-family: "Titillium-Bold";
+    color: #10142d;
+  }
+  .sale {
+    margin-top:3vw;
+  }
+  
+  .swiper {
+    height: 37vw;
+  }
+
+  .swiper-pagination {
+    text-align: center;
+    margin-left:0vw;
+  }
+}
