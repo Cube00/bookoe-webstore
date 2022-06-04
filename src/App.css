@@ -26,3 +26,9 @@
     url("./fonts/TitilliumWeb-Regular.ttf") format("truetype"),
     url("./fonts/TitilliumWeb-Regular.svg#TitilliumWeb-Regular") format("svg");
 }
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}

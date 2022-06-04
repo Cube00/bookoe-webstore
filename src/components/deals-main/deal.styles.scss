@@ -2,4 +2,19 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  .ads{
+    width: 23%;
+    height: 35vw;
+    border-radius:1vw;
+    overflow: hidden;
+    cursor: pointer;
+    .ads_image{
+      object-fit: contain;
+      background-repeat: no-repeat;
+      width: 105%;
+      height: 105%;
+      margin-left:-0.3vw;
+      margin-top:-1vw;
+    }
+  }
 }

@@ -13,9 +13,9 @@ import HomePage from './pages/home/home.page'
 class App extends React.Component {
   componentDidMount(){
     const {getBooks} = this.props;
-    fetch(`https://api.itbook.store/1.0/new`)
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=ofIRYZC4A6G1QJi9z91YLWGax7Gntm8P`)
       .then(res=> res.json())
-      .then(data=> getBooks(data.books))
+      .then(data=> getBooks(data.results.books))
   }
 
   render(){
