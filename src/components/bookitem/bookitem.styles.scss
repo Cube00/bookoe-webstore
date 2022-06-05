@@ -1,39 +1,17 @@
 .book {
   overflow: hidden;
+  transition:0.3s;
+  max-height: 30vw;
   .book-image{
     position: relative;
     height: 20vw;
     border-radius:1vw;
     overflow: hidden;
-    .addToCart {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index:1;
-      opacity:0;
-      transition: 0.3s;
-      top:0;
-      button{
-        padding:1vw 2vw;
-        background:#6c5dd4;
-        border:none;
-        border-radius:0.5vw;
-        color:#fff;
-        font-family: "Titillium-Bold";
-        cursor:pointer;
-        .cart{
-          margin-top:0.3vw;
-          margin-bottom:-0.1vw;
-          margin-right:0.4vw;
-        }
-      }
-    }
+    transition:0.3s;
     img {
       width: 100%;
-      height: 100%;
+      height: auto;
+      min-height:100%;
     }
   }
   .book-info {
@@ -75,8 +53,60 @@
     }
   }
   &:hover {
+    .book-image {
+      height: 15vw;
+      img {
+        height: auto;
+      }
+    }
     .addToCart{
+      position: relative;
+      height: auto;
       opacity: 1;
+    }
+  }
+  .addToCart {
+    position: relative;
+    padding:2vw 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity:1;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px #f1f1f1;
+    background: #fff;
+    button{
+      background:#6c5dd4;
+      border:none;
+      border-radius:0.5vw;
+      color:#fff;
+      font-family: "Titillium-Bold";
+      cursor:pointer;
+      &:nth-child(1){
+        span {
+          display: block;
+          padding:1vw 2vw;
+        }
+      }
+      &:nth-child(2){
+        box-shadow: 0 3px 6px #e9e9e9;
+        background-color: transparent;
+        margin-right:2px;
+        span {
+          display: block;
+          padding:1vw 1vw;
+          .f-co{
+            color: #010101;
+          }
+        }
+      }
+      .cart{
+        margin-top:0.3vw;
+        margin-bottom:-0.1vw;
+        margin-right:0.4vw;
+      }
     }
   }
 }

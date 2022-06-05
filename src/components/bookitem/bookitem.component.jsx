@@ -1,14 +1,13 @@
 import './bookitem.styles.scss';
 
+import {MdOutlineFavoriteBorder} from 'react-icons/md';
+
 const BookItem = ({item, addToCart}) =>{
   const {title, author, price, book_image} = item;
   return <>
     <div className="book">
       <div className="book-image">
         <img src={book_image} alt="" />
-        <div className="addToCart">
-          <button onClick={()=>addToCart(item)}>Add to cart</button>
-        </div>
       </div>
       <div className="book-info">
         <h2>{title}</h2>
@@ -16,6 +15,10 @@ const BookItem = ({item, addToCart}) =>{
       </div>
       <div className="book-price">
         <span>{price}</span>
+      </div>
+      <div className="addToCart">
+        <button onClick={()=>addToCart(item)}><span>Add to cart</span></button>
+        <button><span><MdOutlineFavoriteBorder className="f-co"/></span></button>
       </div>
     </div>
   </>

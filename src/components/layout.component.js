@@ -2,11 +2,13 @@ import React from 'react';
 
 import Header from './header/header.component'
 
+import Footer from './footer/footer.component'
+
 const Layout = (props) => {
   return <>
     <Header />
     {props.children}
-    <h2>rame 2</h2>
+    <Footer />
   </>
 }
 
