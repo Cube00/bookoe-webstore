@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
 
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
 
-import {getBooksData} from './redux/books/books.action'
+import {getBooksData} from './redux/books/books.action';
 
-import Layout from './components/layout.component'
+import Layout from './components/layout.component';
 
-import HomePage from './pages/home/home.page'
+import HomePage from './pages/home/home.page';
+import Checkout from './pages/checkout/checkout.page';
 
+import {Routes, Route} from 'react-router-dom';
 
 class App extends React.Component {
   componentDidMount(){
@@ -21,7 +23,10 @@ class App extends React.Component {
   render(){
     return <>
       <Layout>
-        <HomePage />
+        <Routes>
+          <Route exact path='/' element={<HomePage />} />
+          <Route path='/checkout' element={<Checkout />} />
+        </Routes>
       </Layout>
     </>
   }
