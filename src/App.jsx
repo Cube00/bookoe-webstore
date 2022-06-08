@@ -12,22 +12,25 @@ import Checkout from './pages/checkout/checkout.page';
 
 import {Routes, Route} from 'react-router-dom';
 
+import {BOOKS_API_KEY} from './api'
+
 class App extends React.Component {
   componentDidMount(){
     const {getBooks} = this.props;
-    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=ofIRYZC4A6G1QJi9z91YLWGax7Gntm8P`)
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${BOOKS_API_KEY}`)
       .then(res=> res.json())
       .then(data=> getBooks(data.results.books))
   }
 
   render(){
     return <>
-      <Layout>
-        <Routes>
+      <Routes>
+        <Route element={<Layout />}>
           <Route exact path='/' element={<HomePage />} />
-          <Route path='/checkout' element={<Checkout />} />
-        </Routes>
-      </Layout>
+        </Route>
+
+        <Route exact path='/checkout' element={<Checkout />} />
+      </Routes>
     </>
   }
 }
